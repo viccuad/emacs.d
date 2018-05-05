@@ -4,6 +4,12 @@ viccuad's Emacs configuration
 install
 -------
 
+Install spacemacs:
+```
+~$ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+```
+
+install these configs:
 ```
 ~$ clone git@gitlab.com:viccuad/emacs.d.git .spacemacs.d
 ```
