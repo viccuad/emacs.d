@@ -87,19 +87,19 @@
        (setq interprogram-paste-function 'xclip-paste-function)
        ))
 
-;;     ;;;; SPACEMACS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;     
+;;;; SPACEMACS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;
 ;;       ;; (spacemacs/toggle-evil-cleverparens-on)
 ;;       ;; (spacemacs/toggle-aggressive-indent-globally-on)
-;;     
+;;
 ;;       ;; truncate lines in buffer (there is no hook for buffers and the setting is
 ;;       ;; buffer-local, so do it with other hooks):
 ;;       (add-hook 'prog-mode-hook 'spacemacs/toggle-truncate-lines-off)
 ;;       (add-hook 'text-mode-hook 'spacemacs/toggle-truncate-lines-off)
 ;;       ;; TODO after an autocompletion, the truncate-lines gets back on (open an issue)
-;;     
-;;       (setq visible-bell t)  ;; Don't let Emacs hurt your ears
-;;     
+;;
+    (setq visible-bell t)  ;; Don't let Emacs hurt your ears
+;;
 ;;       ;; TODO: persistent undo history: https://github.com/syl20bnr/spacemacs/issues/774
 ;;       (setq undo-tree-auto-save-history t
 ;;             undo-tree-history-directory-alist
@@ -133,6 +133,23 @@
 ;;     
 ;;       avy-all-windows 'all-frames
 ;;     
+;;;; CUSTOM FACES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+    ;; for monokai
+    ;; custom set faces for autocompletion pop-ups
+    (custom-set-faces
+    '(company-tooltip-common
+      ((t (:inherit company-tooltip :weight bold :underline nil))))
+    '(company-tooltip-common-selection
+      ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
+
+    ;(set-face-background 'linum  (face-attribute 'hl-line :background)) ;; TODO BROKEN
+
+    (setq fci-rule-color "#292929") ; https://github.com/syl20bnr/spacemacs/issues/8917
+    (set-face-background 'hl-line "#292929")
+
+    (set-face-italic 'font-lock-comment-face t)
+
 ;;     ;;;; SMARTPARENS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;     
 ;;       (setq-default
@@ -153,85 +170,52 @@
            (linum-format (concat " %" (number-to-string w) "d ")))
       ad-do-it))
 
-;;     ;;;; GOLDEN RATIO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;     
-;;       (setq golden-ratio-auto-scale t) ;; for wide screens
-;;     
-;;     ;;;; VC GUTTER ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;     
-;;       (setq
-;;        diff-hl-margin-side 'left
-;;        diff-hl-margin-mode t ;; so it works in TUI
-;;        )
-;;     
-;;       (git-gutter:linum-setup) ;; make it work with linum
-;;     
-;;     
-;;     ;;;; WHITESPACE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;     
-;;       ;; (setq-default
-;;       ;;  whitespace-line-column 80)
-;;     
-;;       (spacemacs/toggle-whitespace-globally-on)
-;;       (add-hook 'prog-mode-hook #'whitespace-mode)
-;;       (add-hook 'text-mode-hook #'whitespace-mode)
-;;     
-;;       (setq whitespace-style '(
-;;                                ;; via display table:
-;;                                ;; space-mark
-;;                                ;; tab-mark
-;;                                ;; newline-mark
-;;                                face
-;;                                ;; spaces         ;; SPACEs and HARD SPACEs
-;;                                ;; lines          ;; lines that go past whitespace-line-column
-;;                                ;; lines-tail     ;; part of lines that go past whitespace-line-column
-;;                                tabs
-;;                                newline
-;;                                empty             ;; empty lines at beginning and end of buffer
-;;                                trailing        
-;;                                ;; evaluated in this order:
-;;                                indentation                ;; either 8 or more spaces, or tabs, depending on indent-tab-mode
-;;                                indentation::tab        ;; tabs at beginning of line
-;;                                ;; indentation::space      ;; 8 or more spaces at beginning of line
-;;                                ;; evaluated in this order:
-;;                                space-after-tab            ;; 8 or more SPACEs after a TAB, if ‘indent-tabs-mode’ (which see) is non-nil; otherwise tabs
-;;                                ;; space-after-tab::tab    ;; 8 or more SPACEs after a TAB
-;;                                ;; space-after-tab::space  ;; TABs are visualized when occurs 8 or more SPACEs after a TAB
-;;                                ;; evaluated in this order:
-;;                                space-before-tab           ;; SPACEs before TAB, if ‘indent-tabs-mode’ (which see) is non-nil; otherwise, TABs
-;;                                ;; space-before-tab::tab   ;; SPACEs before TAB
-;;                                ;; space-before-tab::space ;; TABs are visualized when occurs SPACEs before TAB
-;;                                )
-;;             whitespace-display-mappings '(
-;;                                           (space-mark 32 [183] [46]) ; 32 SPACE, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
-;;                                           (newline-mark 10 [8629 10]) ; 10 LINE FEED
-;;                                           (tab-mark 9 [8594 9] [92 9])
-;;                                           )
-;;             )
-;;     
-;;     ;;;; HIGHLIGHT TROLL CHARS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;     
-;;       ;; TODO: http://www.emacswiki.org/emacs/ShowWhiteSpace#toc3
-;;       ;; call matchadd('ErrorMsg', '[^\d0-\d127]')
-;;       ;; highlights weird unicode chars that try to pass as
-;;       ;; normal. eg:↵ ⅰnt ⅿain() { рrintf ("Ηello troll!\n");
-;;     
-;;       ;; Add all unicode characters to tab regexp so we highlight them too
-;;       ;; (setq whitespace-tab-regexp "\\([\t[:nonascii:]]\\)")
-;;       ;; (add-hook 'font-lock-mode-hook 'hc-highlight-tabs) ;; highlight tabs
-;;     
-;;     
-;;     ;;;; SAFE LOCAL VARS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;     
-;;       ;; for .dir-locals.el files
-;;       (put 'helm-make-build-dir 'safe-local-variable 'stringp)
-;;     
-;;     ;;;; TODO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;     
-;;       ;; emacs doesn't see debian-el editing d/control etc as prog-mode nor text-mode
-;;       ;; fix colors on diffs and patches
-;;       ;; make emacsclient independent and don't close, if 2 instances have the same buffer open
-;;       ;; highlight tabs and indentation
-;;       ;;   https://github.com/antonj/Highlight-Indentation-for-Emacs
-;;       ;; https://www.gnu.org/software/emacs/manual/html_node/eintr/index.html#SEC_Contents
-;;       ;; fix whitespaces, they show in emacs but not in emacs -nw
+;;;; GOLDEN RATIO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (setq golden-ratio-auto-scale t) ;; for wide screens
+
+;;;; VC GUTTER ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  (setq
+   diff-hl-margin-side 'left
+   diff-hl-margin-mode t ;; so it works in TUI
+   )
+
+;;;; WHITESPACE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ;; (setq-default
+  ;;  whitespace-line-column 80)
+
+  (setq whitespace-style '(
+                           ;; via display table:
+                           ;; space-mark
+                           ;; tab-mark
+                           ;; newline-mark
+                           face
+                           ;; spaces         ;; SPACEs and HARD SPACEs
+                           ;; lines          ;; lines that go past whitespace-line-column
+                           ;; lines-tail     ;; part of lines that go past whitespace-line-column
+                           tabs
+                           newline
+                           empty             ;; empty lines at beginning and end of buffer
+                           trailing
+                           ;; evaluated in this order:
+                           indentation                ;; either 8 or more spaces, or tabs, depending on indent-tab-mode
+                           indentation::tab        ;; tabs at beginning of line
+                           ;; indentation::space      ;; 8 or more spaces at beginning of line
+                           ;; evaluated in this order:
+                           space-after-tab            ;; 8 or more SPACEs after a TAB, if ‘indent-tabs-mode’ (which see) is non-nil; otherwise tabs
+                           ;; space-after-tab::tab    ;; 8 or more SPACEs after a TAB
+                           ;; space-after-tab::space  ;; TABs are visualized when occurs 8 or more SPACEs after a TAB
+                           ;; evaluated in this order:
+                           space-before-tab           ;; SPACEs before TAB, if ‘indent-tabs-mode’ (which see) is non-nil; otherwise, TABs
+                           ;; space-before-tab::tab   ;; SPACEs before TAB
+                           ;; space-before-tab::space ;; TABs are visualized when occurs SPACEs before TAB
+                           )
+        whitespace-display-mappings '(
+                                      (space-mark 32 [183] [46]) ; 32 SPACE, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
+                                      (newline-mark 10 [8629 10]) ; 10 LINE FEED
+                                      (tab-mark 9 [8594 9] [92 9])
+                                      )
+        )
+
