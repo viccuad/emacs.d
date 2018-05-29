@@ -71,7 +71,7 @@ This function should only modify configuration layer settings."
      html
      (latex :variables
             ;; latex-build-command "LatexMk -pdflatex='xelatex --shell-escape'"
-            ;; latex-build-command "LatexMk"
+            latex-build-command "LatexMk"
             )
      markdown
      vimscript
