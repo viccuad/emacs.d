@@ -59,13 +59,6 @@
   (set-display-table-slot display-table 'vertical-border (make-glyph-code ?│))
   (setq standard-display-table display-table))
 
-
-;; powerline ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;(setq powerline-default-separator 'utf-8) ;; default separators are arrows
-;;(spaceline-compile) ;; needed for applying the change
-
-
 ;; miscelanea ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (blink-cursor-mode t)
