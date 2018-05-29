@@ -40,6 +40,7 @@
 
 (defconst viccuad-major-modes-packages
   '(flycheck-checkbashisms)
+  )
 
 
 ;;; packages.el ends here
