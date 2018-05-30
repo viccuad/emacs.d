@@ -84,48 +84,9 @@
 ;;
 ;;       ;; (spacemacs/toggle-evil-cleverparens-on)
 ;;       ;; (spacemacs/toggle-aggressive-indent-globally-on)
-;;
-;;       ;; truncate lines in buffer (there is no hook for buffers and the setting is
-;;       ;; buffer-local, so do it with other hooks):
-;;       (add-hook 'prog-mode-hook 'spacemacs/toggle-truncate-lines-off)
-;;       (add-hook 'text-mode-hook 'spacemacs/toggle-truncate-lines-off)
-;;       ;; TODO after an autocompletion, the truncate-lines gets back on (open an issue)
-;;
+
     (setq visible-bell t)  ;; Don't let Emacs hurt your ears
-;;
-;;       ;; TODO: persistent undo history: https://github.com/syl20bnr/spacemacs/issues/774
-;;       (setq undo-tree-auto-save-history t
-;;             undo-tree-history-directory-alist
-;;             `(("." . ,(concat spacemacs-cache-directory "undo"))))
-;;       (unless (file-exists-p (concat spacemacs-cache-directory "undo"))
-;;         (Make-directory (concat spacemacs-cache-directory "undo")))
-;;     
-;;       ; Switch neotree root whenever the projectile project changes.
-;;       (setq projectile-switch-project-action 'neotree-projectile-action)
-;;     
-;;     
-;;     ;;;; CUSTOM FACES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;     
-;;       ;; for monokai
-;;           ;; custom set faces for autocompletion pop-ups
-;;           (custom-set-faces
-;;           '(company-tooltip-common
-;;             ((t (:inherit company-tooltip :weight bold :underline nil))))
-;;           '(company-tooltip-common-selection
-;;             ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
-;;     
-;;           (set-face-background 'linum  (face-attribute 'hl-line :background))
-;;     
-;;           (setq fci-rule-color "#292929")
-;;           (set-face-background 'hl-line "#292929")
-;;     
-;;           (set-face-italic 'font-lock-comment-face t)
-;;     
-;;     
-;;     ;;;; AVY ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;     
-;;       avy-all-windows 'all-frames
-;;     
+
 ;;;; CUSTOM FACES ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
     ;; for monokai
@@ -139,19 +100,11 @@
     ;(set-face-background 'linum  (face-attribute 'hl-line :background)) ;; TODO BROKEN
 
     (setq fci-rule-color "#292929") ; https://github.com/syl20bnr/spacemacs/issues/8917
+
     (set-face-background 'hl-line "#292929")
 
     (set-face-italic 'font-lock-comment-face t)
 
-;;     ;;;; SMARTPARENS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;     
-;;       (setq-default
-;;         sp-highlight-pair-overlay nil
-;;         sp-highlight-wrap-overlay nil
-;;         sp-highlight-wrap-tag-overlay nil)
-;;     
-;;     
-;;     
 ;;;; LINUM and HL-LINE ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   (setq hl-line-sticky-flag nil) ;; highlights the line about point in the selected window only
@@ -211,4 +164,10 @@
                                       (tab-mark 9 [8594 9] [92 9])
                                       )
         )
+
+;;;; SAFE LOCAL VARS ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+  ;; for .dir-locals.el files
+  (put 'helm-make-build-dir 'safe-local-variable 'stringp)
+
 
