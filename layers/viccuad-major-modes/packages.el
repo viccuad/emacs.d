@@ -39,7 +39,7 @@
 ;;; Code:
 
 (defconst viccuad-major-modes-packages
-  '(flycheck-checkbashisms)
+  '()
   )
 
 

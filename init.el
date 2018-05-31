@@ -97,7 +97,7 @@ This function should only modify configuration layer settings."
      ;; private layers:
      viccuad-look-n-feel
      viccuad-evil
-     ; viccuad-major-modes
+     viccuad-major-modes
      )
 
    ;; List of additional packages that will be installed without being
