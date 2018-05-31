@@ -94,6 +94,7 @@ This function should only modify configuration layer settings."
      command-log
      colors
      themes-megapack
+     theming
      ;; private layers:
      viccuad-look-n-feel
      viccuad-evil
