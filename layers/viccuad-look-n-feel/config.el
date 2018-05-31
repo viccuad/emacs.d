@@ -147,9 +147,9 @@
                          ;; space-before-tab::space ;; TABs are visualized when occurs SPACEs before TAB
                          )
       whitespace-display-mappings '(
-                                    (space-mark 32 [183] [46]) ; 32 SPACE, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
-                                    (newline-mark 10 [8629 10]) ; 10 LINE FEED
-                                    (tab-mark 9 [8594 9] [92 9])
+                                    ;; (space-mark 32 [183] [46]) ; 32 SPACE, 183 MIDDLE DOT 「·」, 46 FULL STOP 「.」
+                                    ;; (newline-mark 10 [8629 10]) ; 10 LINE FEED
+                                    ;; (tab-mark 9 [8594 9] [92 9])
                                     )
       )
 
