@@ -67,7 +67,7 @@
       '((monokai
          (font-lock-comment-face :slant italic)
          (hl-line :background "#292929")
-         (linum :inherit hl-line :background nil)
+         ;; (linum :inherit hl-line :background nil)
          (company-tooltip-common :inherit company-tooltip
                                  :weight bold
                                  :underline nil)
