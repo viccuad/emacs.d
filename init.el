@@ -70,7 +70,6 @@ This function should only modify configuration layer settings."
      shell
      html
      (latex :variables
-            ;; latex-build-command "LatexMk -pdflatex='xelatex --shell-escape'"
             latex-build-command "LatexMk"
             )
      markdown
