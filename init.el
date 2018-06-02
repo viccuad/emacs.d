@@ -98,6 +98,7 @@ This function should only modify configuration layer settings."
      viccuad-look-n-feel
      viccuad-evil
      viccuad-major-modes
+     viccuad-gnus
      )
 
    ;; List of additional packages that will be installed without being

@@ -48,5 +48,6 @@
     notmuch ;; TODO I should use debian's packages
     gnus-alias ;; for messages.el aliases, used for notmuch
   )
+)
 
 ;;; packages.el ends here
