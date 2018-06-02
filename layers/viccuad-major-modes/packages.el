@@ -1,4 +1,4 @@
-;;;; ~/.spaceemacs.d/ -- viccuad's Emacs configuration -*- no-byte-compile: t -*-
+;;;; ~/.spacemacs.d/ -- viccuad's Emacs configuration -*- no-byte-compile: t -*-
 ;;
 ;; Copyright (C) 2018
 ;; Victor Cuadrado

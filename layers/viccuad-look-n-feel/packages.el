@@ -1,4 +1,4 @@
-;;;; ~/.spaceemacs.d/ -- viccuad's Emacs configuration -*- no-byte-compile: t -*-
+;;;; ~/.spacemacs.d/ -- viccuad's Emacs configuration -*- no-byte-compile: t -*-
 ;;
 ;; Copyright (C) 2018
 ;; Victor Cuadrado
@@ -42,5 +42,8 @@
   '(
     )
   )
+
+;; (defun viccuad-look-n-feel/post-init-projectile ()
+;;   (setq projectile-switch-project-action 'neotree-projectile-action))
 
 ;;; packages.el ends here
