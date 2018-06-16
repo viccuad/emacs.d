@@ -78,7 +78,10 @@ This function should only modify configuration layer settings."
      ruby
      django
      javascript
-     go
+     (go :variables
+         godoc-at-point-function 'godoc-gogetdoc
+         go-use-gometalinter t
+         )
      shell-scripts
      sql
      vagrant
