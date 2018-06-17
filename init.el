@@ -82,6 +82,7 @@ This function should only modify configuration layer settings."
          godoc-at-point-function 'godoc-gogetdoc
          go-use-gometalinter t
          )
+     protobuf
      shell-scripts
      sql
      vagrant
