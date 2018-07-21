@@ -45,6 +45,26 @@
 ;; don't hide messages that have been read
 (setq gnus-fetch-old-headers t)
 
+;; use w3m instead of emacs simple html renderer
+(setq mm-text-html-renderer 'gnus-w3m)
+
+;; layout
+(gnus-add-configuration
+ '(article
+   (horizontal 1.0
+               (vertical 25
+                         (group 1.0))
+               (vertical 1.0 ;; take remaining space
+                         (summary 0.25 point)
+                         (article 1.0)))))
+(gnus-add-configuration
+ '(summary
+   (horizontal 1.0
+               (vertical 25
+                         (group 1.0))
+               (vertical 1.0
+                         (summary 1.0 point)))))
+
 ;; load private config
 (spacemacs|use-package-add-hook gnus
   :post-init (let ((feed-file (concat user-home-directory ".spacemacs.d/private/etc/gnus.el")))
