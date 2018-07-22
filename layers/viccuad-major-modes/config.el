@@ -61,3 +61,7 @@
 
 ;;;; FLYCHECK ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; enable proselint in textual modes:
+(add-hook 'markdown-mode-hook #'flycheck-mode)
+(add-hook 'text-mode-hook #'flycheck-mode)
+(add-hook 'message-mode-hook #'flycheck-mode)
