@@ -100,6 +100,7 @@ This function should only modify configuration layer settings."
      theming
      docker
      debug
+     treemacs
      ;; private layers:
      viccuad-look-n-feel
      viccuad-evil
