@@ -28,10 +28,6 @@
 ;; prevent visual selections to override system clipboard:
 (fset 'evil-visual-update-x-selection 'ignore)
 
-;; make j & k behave as g j & g k:
-;(define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
-;(define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
-
 ;; Make v$ exclude the carriage return
 ;(evil-define-motion evil-last-non-blank (count)
 ;  :type inclusive
