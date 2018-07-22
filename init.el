@@ -99,6 +99,7 @@ This function should only modify configuration layer settings."
      themes-megapack
      theming
      docker
+     debug
      ;; private layers:
      viccuad-look-n-feel
      viccuad-evil
