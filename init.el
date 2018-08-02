@@ -81,6 +81,7 @@ This function should only modify configuration layer settings."
      (go :variables
          godoc-at-point-function 'godoc-gogetdoc
          go-use-gometalinter t
+         go-format-before-save t
          )
      protobuf
      shell-scripts
