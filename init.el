@@ -82,6 +82,7 @@ This function should only modify configuration layer settings."
          godoc-at-point-function 'godoc-gogetdoc
          go-use-gometalinter t
          go-format-before-save t
+         go-backend 'go-mode
          )
      protobuf
      shell-scripts
@@ -102,6 +103,7 @@ This function should only modify configuration layer settings."
      docker
      debug
      treemacs
+     lsp
      ;; private layers:
      viccuad-look-n-feel
      viccuad-evil
