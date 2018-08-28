@@ -80,7 +80,8 @@ This function should only modify configuration layer settings."
      javascript
      (go :variables
          godoc-at-point-function 'godoc-gogetdoc
-         go-use-gometalinter t
+         go-use-gometalinter nil
+         go-use-golangci-lint t
          go-format-before-save t
          go-backend 'go-mode
          )
