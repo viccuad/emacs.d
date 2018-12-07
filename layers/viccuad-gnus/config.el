@@ -42,6 +42,15 @@
        "%s\n"))
 (setq gnus-summary-display-arrow t)
 
+;; colour quotes
+(add-hook 'message-mode-hook
+          (lambda ()
+            (font-lock-add-keywords nil
+                                    '(("^[ \t]*>[ \t]*>[ \t]*>.*$"
+                                       (0 'message-multiply-quoted-text-face))
+                                      ("^[ \t]*>[ \t]*>.*$"
+                                       (0 'message-double-quoted-text-face))))))
+
 ;; don't hide messages that have been read
 (setq gnus-fetch-old-headers t)
 
