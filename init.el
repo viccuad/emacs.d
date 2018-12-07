@@ -83,6 +83,7 @@ This function should only modify configuration layer settings."
          go-use-gometalinter nil
          go-use-golangci-lint t
          go-format-before-save t
+         gofmt-command "goimports"
          go-backend 'go-mode
          )
      protobuf
