@@ -84,7 +84,8 @@ This function should only modify configuration layer settings."
          go-use-golangci-lint t
          go-format-before-save t
          gofmt-command "goimports"
-         go-backend 'go-mode
+         ;; go-backend 'go-mode
+         go-backend 'lsp
          )
      protobuf
      shell-scripts
