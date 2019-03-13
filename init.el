@@ -92,6 +92,7 @@ This function should only modify configuration layer settings."
      sql
      vagrant
      ansible
+     groovy
      salt
      typography
      emoji
