@@ -11,7 +11,7 @@ Install spacemacs:
 
 install these configs:
 ```
-~$ clone git@gitlab.com:viccuad/emacs.d.git .spacemacs.d
+~$ git clone git@gitlab.com:viccuad/emacs.d.git .spacemacs.d
 ```
 
 test
