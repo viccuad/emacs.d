@@ -103,6 +103,7 @@ This function should only modify configuration layer settings."
      debug
      treemacs
      lsp
+     dap
      ;; private layers:
      viccuad-look-n-feel
      viccuad-evil
