@@ -40,13 +40,13 @@
 
 (defconst viccuad-gnus-packages
   '(
-    w3m      ;; for gnus
-    smtpmail ;; for gnus
-    ;; gnus-notify ;;for gnus, notifications on the modeline
-    highlight-chars ;; for tab, troll chars
-    ;; org-notmuch.el
-    notmuch ;; TODO I should use debian's packages
-    gnus-alias ;; for messages.el aliases, used for notmuch
+    ;; w3m      ;; for gnus
+    ;; smtpmail ;; for gnus
+    ;; ;; gnus-notify ;;for gnus, notifications on the modeline
+    ;; highlight-chars ;; for tab, troll chars
+    ;; ;; org-notmuch.el
+    ;; notmuch ;; TODO I should use debian's packages
+    ;; gnus-alias ;; for messages.el aliases, used for notmuch
   )
 )
 
