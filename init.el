@@ -79,12 +79,7 @@ This function should only modify configuration layer settings."
      django
      javascript
      (go :variables
-         godoc-at-point-function 'godoc-gogetdoc
-         go-use-gometalinter nil
-         go-use-golangci-lint t
          go-format-before-save t
-         gofmt-command "goimports"
-         ;; go-backend 'go-mode
          go-backend 'lsp
          )
      protobuf
