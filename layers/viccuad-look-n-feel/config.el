@@ -137,3 +137,10 @@
 
 ;; for .dir-locals.el files
 (put 'helm-make-build-dir 'safe-local-variable 'stringp)
+
+;;;; MOUSE WHEEL ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; Fix mouse wheel
+(unless window-system
+  (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
+  (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
