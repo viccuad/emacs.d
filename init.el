@@ -513,6 +513,9 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  ;; allow emacs as editor for git
+  ;; see http://develop.spacemacs.org/layers/+source-control/git/README.html#global-git-commit-mode
+  (global-git-commit-mode t)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
