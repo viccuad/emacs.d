@@ -39,8 +39,6 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
-     emacs-lisp
      (auto-completion :variables
                       auto-completion-private-snippets-directory nil ;; use ~/.emacs.d/private/snippets
                       auto-completion-enable-snippets-in-popup t
@@ -49,7 +47,6 @@ This function should only modify configuration layer settings."
      spell-checking
      syntax-checking
      ;; semantic ;; display current function interface at the top of the screen
-     git
      (version-control :variables
                       version-control-diff-tool 'git-gutter
                       version-control-diff-side 'left
@@ -58,51 +55,61 @@ This function should only modify configuration layer settings."
      evil-snipe
      vim-empty-lines
      vinegar
-     tmux
-     (c-c++ :variables
-            c-c++-enable-clang-support t
-            c-c++-default-mode-for-headers 'c-mode ;; it can be c++-mode
-            )
-     cscope
-     gtags
-     major-modes
-     org
-     shell
-     html
-     (latex :variables
-            latex-build-command "LatexMk"
-            )
-     markdown
-     vimscript
-     python
-     ruby
-     django
-     javascript
-     (go :variables
-         go-format-before-save t
-         go-backend 'lsp
-         )
-     protobuf
-     shell-scripts
-     sql
-     vagrant
-     ansible
-     groovy
-     salt
      typography
      emoji
      selectric
-     speed-reading
      ranger
      gnus
      command-log
      colors
      themes-megapack
      theming
-     docker
-     debug
+     tmux
+     gtags
      treemacs
-     lsp
+     org
+     shell
+     git
+     html
+     (latex :variables
+            latex-build-command "LatexMk"
+            )
+     markdown
+     yaml
+     vimscript
+     (c-c++ :variables
+            c++-enable-organize-includes-on-save t
+            c-c++-enable-auto-newline t
+            c-c++-adopt-subprojects t
+            c-c++-backend 'lsp-ccls
+            c-c++-lsp-sem-highlight-method 'font-lock
+            )
+     python
+     ruby
+     javascript
+     emacs-lisp
+     (go :variables
+         go-format-before-save t
+         go-backend 'lsp
+         )
+     (rust :variables
+           rust-backend 'lsp
+           )
+     shell-scripts
+     sql
+     vagrant
+     (ansible :variables
+              ansible-auto-encrypt-decrypt t
+              )
+     groovy
+     salt
+     (terraform :variables terraform-auto-format-on-save t)
+     docker
+     protobuf
+     debug
+     (lsp :variables
+         lsp-ui-sideline-enable nil
+         )
      dap
      ;; private layers:
      viccuad-look-n-feel
