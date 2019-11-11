@@ -70,6 +70,7 @@ This function should only modify configuration layer settings."
      org
      shell
      git
+     github
      html
      (latex :variables
             latex-build-command "LatexMk"
