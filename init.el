@@ -95,6 +95,7 @@ This function should only modify configuration layer settings."
          )
      (rust :variables
            rust-backend 'lsp
+           rust-format-on-save t
            )
      shell-scripts
      sql
