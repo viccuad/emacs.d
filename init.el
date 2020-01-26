@@ -85,7 +85,7 @@ This function should only modify configuration layer settings."
             c-c++-backend 'lsp-ccls
             c-c++-lsp-sem-highlight-method 'font-lock
             )
-     python
+     (python :variables python-backend 'lsp)
      ruby
      javascript
      emacs-lisp
