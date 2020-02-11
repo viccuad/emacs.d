@@ -519,6 +519,9 @@ before packages are loaded."
   ;; see http://develop.spacemacs.org/layers/+source-control/git/README.html#global-git-commit-mode
   (global-git-commit-mode t)
 
+  ;; autorefresh magit status buffer after save
+  (add-hook 'after-save-hook 'magit-after-save-refresh-status t)
+
   ;; Change authinfo's default path:
   (setq auth-sources
         '((:source "~/.spacemacs.d/secrets/authinfo.gpg")))
