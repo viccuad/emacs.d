@@ -111,6 +111,7 @@ This function should only modify configuration layer settings."
      debug
      (lsp :variables
          lsp-ui-sideline-enable nil
+         lsp-rust-server 'rust-analyzer
          )
      dap
      ;; private layers:
