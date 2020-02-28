@@ -66,7 +66,9 @@ This function should only modify configuration layer settings."
      theming
      tmux
      gtags
-     treemacs
+     (treemacs :variables
+               treemacs-lock-width t
+               )
      org
      shell
      git
